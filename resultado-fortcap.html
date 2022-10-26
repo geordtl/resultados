@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,300&display=swap"
+        rel="stylesheet">
+</head>
+
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+        height: 100vh;
+        display:flex;
+        flex-direction:column;
+    }
+
+    nav {
+        padding: 14px;
+        background: rgb(8,71,176);
+        background: linear-gradient(90deg, rgba(8,71,176,1) 0%, rgba(0,204,255,1) 49%);
+    }
+
+    .image {
+        /* background: rgb(8,71,176); */
+        /* background: linear-gradient(90deg, rgba(8,71,176,1) 0%, rgba(0,204,255,1) 49%); */
+        background: rgb(80 139 214);
+        text-align: center;
+    }
+
+    .fotos {
+        width: 100%;
+        min-height: 500px;
+        margin-bottom: 10px;
+        padding: 10px;
+    }
+
+    @media screen and (max-width:1024px) {
+        .image img {
+            width: 100%;
+        }
+
+        .fotos {
+            width: 100%;
+            min-height: 400px;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+
+        h1 {
+            margin-top: 16px;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        select {
+            margin-bottom: 20px;
+            width: 80%;
+            height: 40px;
+        }
+    }
+
+    @media screen and (min-width:1025px) {
+        .image img {
+            width: 40%;
+        }
+
+
+        h1 {
+            margin-top: 16px;
+            text-align: center;
+        }
+
+
+        select {
+            margin-bottom: 20px;
+            width: 400px;
+            height: 40px;
+        }
+    }
+
+    footer {
+        text-align: center;
+        align-items: center;
+        padding: 20px;
+        color: rgb(181, 181, 181);
+        background-color: #00267D;
+    }
+
+    footer .text-footer {
+        margin-top: 10px;
+
+    }
+
+    article {
+        flex: 1
+    }
+    .wid {
+        margin-top: 30px;
+        /* display: flex; */
+        text-align: center;
+        /* flex-direction: column; */
+        align-items: center;
+        /* justify-content: center; */
+        /* min-height: 80%; */
+    }
+
+    a {
+        text-decoration: none;
+        color: rgb(255, 104, 104);
+    }
+
+    .modal {
+        display: none;
+        /* Hidden by default */
+        position: fixed;
+        /* Stay in place */
+        z-index: 1;
+        /* Sit on top */
+        padding-top: 100px;
+        /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%;
+        /* Full width */
+        height: 100%;
+        /* Full height */
+        overflow: auto;
+        /* Enable scroll if needed */
+        background-color: rgb(0, 0, 0);
+        /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.4);
+        /* Black w/ opacity */
+    }
+
+    .modal-content {
+        background-color: #fefefe;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+    }
+
+    .close {
+        color: #aaaaaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <div class="image"><img src="https://firebasestorage.googleapis.com/v0/b/bucketpublicplay/o/fortcap%2Fresultados%2Fcapa_pagina.png?alt=media" alt="" class="welcome"></div>
+    <h1>Consulte os resultados</h1>
+
+    </div>
+    <div class="wid">
+        <select id="edicao" class="select-edition">
+            <option value="" disabled selected hidden>Selecione uma edição</option>
+        </select>
+        <div id="app" class="flex">
+        </div>
+    </div>
+    <article></article>
+    <footer>
+        <img src="https://firebasestorage.googleapis.com/v0/b/play-project-forall.appspot.com/o/v1%2Fimagens%2FFORTCAP%2Furl-img-customerapp-cliente_1621430746261.png?alt=media"
+            alt="" class="logo-footer" width="60px" />
+        <div class="text-footer">
+            <p>Títulos de Capitalização da Modalidade Filantropia Premiável, aprovados pela Susep conforme PROCESSO nº 15414.623481/2022-55 e emitidos pela CAPEMISA CAPITALIZAÇÃO S/A, CNPJ 14.056.028/0001-55, estabelecida na Rua São Clemente, 38 – Botafogo – Rio de Janeiro – RJ. Antes de contratar, consulte previamente as Condições Gerais.\nA contratação deste título é apropriada principalmente na hipótese do consumidor estar interessado em contribuir com \nAPAE Brasil. A aprovação deste plano pela Susep não implica, por parte da Autarquia, em incentivo ou recomendação a sua aquisição, representando, exclusivamente, sua adequação às normas em vigor. O valor de resgate deste Título poderá ser, caso haja expressa solicitação do subscritor em documento específico que trata da cessão, revertido para a entidade beneficente de assistência social indicada na ficha de cadastro. É proibida a venda para menores de dezesseis anos.\nAtendimento CAPEMISA CAPITALIZAÇÃO SAC. 0800-940-1130. 7. OUVIDORIA. 0800-707-4936, de segunda a sexta-feira, das 8h às 17h</p>
+        </div>
+    </footer>
+</body>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+    // let container = document.getElementById("1243667655");
+    // container.className = "scroll";
+
+    let div = document.getElementById("app");
+    let resultados = [];
+    startWidget();
+    function startWidget() {
+        this.axios
+            .get(
+                "https://play-project-forall.firebaseio.com/FORTCAP/resultados.json"
+            )
+            .then((response) => {
+
+                let res = response.data;
+                resultados.push(...res);
+                resultados = resultados.reverse();
+
+            
+                //? Preenche o select do HTML com os números das edições
+                for (i = 0; i <= resultados.length; i++) {
+                    let numero_edicao = resultados[i].descricao;
+                    let data_sorteio = resultados[i].data_sorteio
+                    let option = document.createElement("option");
+                    let select = document.getElementById("edicao");
+
+                    option.value = numero_edicao;
+                    option.textContent = `${numero_edicao} -  ${data_sorteio}`;
+                    select.appendChild(option);
+                    //? aciona o filtro ao troca o value do select
+                    select.addEventListener("change", () => {
+                        let value = `${select.value}`;
+                        div.innerHTML = "";
+                        let label_res = document.createElement("p");
+                        div.appendChild(label_res);
+
+                            const filter = resultados.find(
+                                (edicao) => edicao.descricao === value
+                            );
+                            let label_data = document.createElement("p");
+                            label_data.textContent = `${filter.descricao} - ${filter.data_sorteio}`;
+                            label_data.style.fontWeight = 700;
+                            div.appendChild(label_data);
+
+                            let descricao = document.createElement("p");
+                            let iframe = document.createElement("iframe");
+                            iframe.frameBorder = 0;
+                            iframe.src = `${filter.resultado_pdf}`;
+                            descricao.textContent = `${filter.descricao}`;
+                            descricao.style.width = "100%"
+                            descricao.className = "flex"
+                            iframe.className = "fotos"
+                            div.appendChild(descricao);
+                            div.appendChild(iframe);
+                    });
+                }
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+    }
+
+
+    var modal = document.getElementById("myModal");
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal 
+    btn.onclick = function () {
+        modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+
+</html>
