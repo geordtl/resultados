@@ -94,8 +94,8 @@
         text-align: center;
         align-items: center;
         padding: 20px;
-        color: rgb(181, 181, 181);
-        background-color: #00267D;
+        color: white;
+        background-color: #508BD6;
     }
 
     footer .text-footer {
@@ -235,7 +235,7 @@
 
                             let descricao = document.createElement("p");
                             let iframe = document.createElement("iframe");
-                            iframe.frameBorder = 0;
+                            // iframe.frameBorder = 0;
                             iframe.src = `${filter.resultado_pdf}`;
                             descricao.textContent = `${filter.descricao}`;
                             descricao.style.width = "100%"
